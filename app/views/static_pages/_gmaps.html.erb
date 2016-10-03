@@ -7,19 +7,14 @@
 </div>
 
 <script type="text/javascript">
-
-handler = Gmaps.build('Google');
-handler.buildMap({
-  provider: {
-    // disableDefaultUI: true
-    // pass in other Google Maps API options here
-  },
-  internal: {
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {
     id: 'map-container'
+    id: 'multi_markers'
   }
 },
 function(){
-  markers = handler.addMarkers([
+  var markers = handler.addMarkers([
     {
       "lat": 39.30941765,
       "lng": -76.65104057,
@@ -61,6 +56,5 @@ function(){
   handler.getMap().setZoom(19);
 }
 );
-
 </script>
 
