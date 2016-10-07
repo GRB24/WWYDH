@@ -6,7 +6,7 @@ class Vacant < ActiveRecord::Base
     search_params = get_search_params(params)
 
     if search_params.empty?
-      vacants = Vacant.state_only
+      vacants = Vacant.all
     else
 			vacants = Vacant.by_full_address(search_params[:full_address])
 									    .by_neighborhood(search_params[:neighborhood])
