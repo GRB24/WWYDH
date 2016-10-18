@@ -1,4 +1,4 @@
-<% provide(:title, @item.vacant) %>
+<% provide(:title, @vacant.full_address) %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -28,7 +28,7 @@
         var lat1 = <%= @vacant.latitude %>;
         var lng1 = <%= @vacant.longitude %>;
         var fenway = {lat: <%= @vacant.longitude %> , lng: <%= @vacant.latitude %> };
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
           center: fenway,
           zoom: 14
         });
